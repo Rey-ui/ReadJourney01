@@ -1,0 +1,12 @@
+.RegTitle {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 94%;
+  letter-spacing: 0.02em;
+  color: #f9f9f9;
+  max-width: 444px;
+}
+.RegTitleSpan {
+  color: rgba(227, 227, 227, 0.5);
+}

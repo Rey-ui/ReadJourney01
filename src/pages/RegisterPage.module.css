@@ -1,0 +1,19 @@
+.RegisterPageContainer {
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.RegisterPageContent {
+  background: #1f1f1f;
+  border-radius: 30px;
+  min-width: 600px;
+  padding: 40px 64px;
+  /* height: 736px;*/
+}
+.RegisterPageImg {
+  background: #1f1f1f;
+  border-radius: 30px;
+  min-width: 600px;
+  /* height: 736px; */
+}

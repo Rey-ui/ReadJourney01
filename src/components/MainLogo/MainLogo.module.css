@@ -1,0 +1,17 @@
+.LogoWrapper {
+  margin-bottom: 107px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.LogoSvg {
+  /* stroke: #f9f9f9; */
+  fill: #f9f9f9;
+}
+.LogoTitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
