@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 //import { apiRegisterUser } from "../redux/auth/operations";
-import css from "./RegisterForm.module.css";
+import css from "./LoginForm.module.css";
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
 
 const UserRegisterSchema = Yup.object().shape({
@@ -27,7 +27,7 @@ const UserRegisterSchema = Yup.object().shape({
 //   password: "",
 // };
 
-const RegisterForm = () => {
+const LoginForm = () => {
   // const dispatch = useDispatch();
 
   const {
@@ -64,19 +64,6 @@ const RegisterForm = () => {
   return (
     <form className={css.Form} onSubmit={handleSubmit(onSubmit)}>
       <div className={css.FormContainer}>
-        <label className={css.FormLabel}>
-          <span className={css.FormLabelSpan}>Name:</span>
-          <input
-            className={css.FormInput}
-            //placeholder="Name:"
-            type="text"
-            name="name"
-            {...register("name")}
-          />
-          {errors.name && (
-            <span className={css.FormError}>{errors.name.message}</span>
-          )}
-        </label>
         <label className={css.FormLabel}>
           <span className={css.FormLabelSpan}>Mail:</span>
           <input
@@ -119,14 +106,14 @@ const RegisterForm = () => {
           title="Click to register user"
           aria-label="Add new mailbox"
         >
-          Registration
+          Log In
         </button>
-        <NavLink className={css.FormButtonNav} to="/login">
-          Already have an account?
+        <NavLink className={css.FormButtonNav} to="/register">
+          Don’t have an account?
         </NavLink>
       </div>
     </form>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;

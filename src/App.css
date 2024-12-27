@@ -57,6 +57,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  outline: none;
 }
 
 button::-moz-focus-inner {
