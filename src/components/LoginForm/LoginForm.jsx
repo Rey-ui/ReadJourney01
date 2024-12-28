@@ -10,10 +10,6 @@ import css from "./LoginForm.module.css";
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
 
 const UserRegisterSchema = Yup.object().shape({
-  name: Yup.string()
-    .required("User name is required!")
-    .min(2, "User name must be at least 2 characters!")
-    .max(50, "User name must be less than 50 characters!"),
   email: Yup.string()
     .required("Email is required!")
     .email("Must be a valid email!"),
@@ -36,7 +32,7 @@ const LoginForm = () => {
     formState: { errors, isSubmitting },
     reset,
   } = useForm({
-    resolver: yupResolver(UserRegisterSchema), // Подключаем Yup для валидации
+    resolver: yupResolver(UserRegisterSchema),
   });
   const [visible, setVisible] = useState(false);
   const isVisible = () => {
@@ -103,7 +99,7 @@ const LoginForm = () => {
         <button
           className={css.FormButton}
           type="submit"
-          title="Click to register user"
+          title="Click to login user"
           aria-label="Add new mailbox"
         >
           Log In
