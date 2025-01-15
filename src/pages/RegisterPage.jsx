@@ -5,10 +5,11 @@ import RegTitle from "../components/RegTitle/RegTitle";
 import css from "./RegisterPage.module.css";
 
 const RegisterPage = () => {
+  const LogoWrapper = "LogoWrapper";
   return (
     <div className={css.RegisterPageContainer}>
       <div className={css.RegisterPageContent}>
-        <MainLogo />
+        <MainLogo LogoWrapper={LogoWrapper} />
         <RegTitle />
         <RegisterForm />
       </div>

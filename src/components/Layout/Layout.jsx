@@ -1,12 +1,12 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import AuthNav from "./AuthNav.jsx";
-import { Audio } from "react-loader-spinner";
+//import { Audio } from "react-loader-spinner";
+import UserMenu from "../UserMenu/UserMenu.jsx";
 
 const Layout = () => {
   return (
     <>
-      <AuthNav />
+      <UserMenu />
       <Suspense fallback={<div>loading</div>}>
         <Outlet />
       </Suspense>

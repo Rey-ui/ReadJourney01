@@ -4,6 +4,12 @@
   align-items: center;
   gap: 4px;
 }
+.LogoWrapperMenu {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 .LogoSvg {
   /* stroke: #f9f9f9; */
   fill: #f9f9f9;

@@ -21,10 +21,11 @@ const LoginPage = () => {
 
   //   fetchData();
   // }, [books]);
+  const LogoWrapper = "LogoWrapper";
   return (
     <div className={css.RegisterPageContainer}>
       <div className={css.RegisterPageContent}>
-        <MainLogo />
+        <MainLogo LogoWrapper={LogoWrapper} />
         <RegTitle />
         <LoginForm />
       </div>

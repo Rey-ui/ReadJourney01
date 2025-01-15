@@ -8,18 +8,20 @@ import { NavLink } from "react-router-dom";
 //import { apiRegisterUser } from "../redux/auth/operations";
 import css from "./RegisterForm.module.css";
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
+import { useDispatch } from "react-redux";
+import { apiRegisterUser } from "../../redux/auth/operations";
 
 const UserRegisterSchema = Yup.object().shape({
   name: Yup.string()
     .required("User name is required!")
     .min(2, "User name must be at least 2 characters!")
-    .max(50, "User name must be less than 50 characters!"),
+    .max(30, "User name must be less than 50 characters!"),
   email: Yup.string()
     .required("Email is required!")
     .email("Must be a valid email!"),
   password: Yup.string()
     .required("Password is required!")
-    .min(8, "Password must be at least 8 characters!"),
+    .min(7, "Password must be at least 8 characters!"),
 });
 // const INITIAL_FORM_DATA = {
 //   name: "",
@@ -28,7 +30,7 @@ const UserRegisterSchema = Yup.object().shape({
 // };
 
 const RegisterForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -43,22 +45,22 @@ const RegisterForm = () => {
     setVisible((prevState) => !prevState);
   };
   const onSubmit = (values) => {
-    // dispatch(
-    //   apiRegisterUser({
-    //     name: values.name,
-    //     email: values.email,
-    //     password: values.password,
-    //   })
-    // )
-    //   .unwrap()
-    //   .then(() => {
-    //     console.log("login success");
-    //   })
-    //   .catch(() => {
-    //     console.log("login error");
-    //   });
+    dispatch(
+      apiRegisterUser({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      })
+    )
+      .unwrap()
+      .then(() => {
+        console.log("login success");
+      })
+      .catch(() => {
+        console.log("login error");
+      });
     console.log(values);
-    reset();
+    // reset();
     return false;
   };
   return (

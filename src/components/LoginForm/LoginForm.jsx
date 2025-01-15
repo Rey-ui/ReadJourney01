@@ -8,6 +8,8 @@ import { NavLink } from "react-router-dom";
 //import { apiRegisterUser } from "../redux/auth/operations";
 import css from "./LoginForm.module.css";
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
+import { useDispatch } from "react-redux";
+import { apiLoginUser } from "../../redux/auth/operations";
 
 const UserRegisterSchema = Yup.object().shape({
   email: Yup.string()
@@ -24,7 +26,7 @@ const UserRegisterSchema = Yup.object().shape({
 // };
 
 const LoginForm = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const {
     register,
@@ -39,22 +41,22 @@ const LoginForm = () => {
     setVisible((prevState) => !prevState);
   };
   const onSubmit = (values) => {
-    // dispatch(
-    //   apiRegisterUser({
-    //     name: values.name,
-    //     email: values.email,
-    //     password: values.password,
-    //   })
-    // )
-    //   .unwrap()
-    //   .then(() => {
-    //     console.log("login success");
-    //   })
-    //   .catch(() => {
-    //     console.log("login error");
-    //   });
+    dispatch(
+      apiLoginUser({
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      })
+    )
+      .unwrap()
+      .then(() => {
+        console.log("login success");
+      })
+      .catch(() => {
+        console.log("login error");
+      });
     console.log(values);
-    reset();
+    // reset();
     return false;
   };
   return (
