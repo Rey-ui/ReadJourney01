@@ -8,5 +8,32 @@
   border-radius: 15px;
 }
 .activeTab {
-  background-color: azure;
+  position: relative;
+  color: #f9f9f9;
+}
+.activeTab::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  left: -1px;
+  top: 30px;
+  background-color: #4f92f7;
+  color: #4f92f7;
+  border-radius: 8px;
+}
+.UserNAvList {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.UserNavItem {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: -0.02em;
+  color: #f9f9f9;
+}
+.buttonAddInfo {
+  color: #686868;
 }
