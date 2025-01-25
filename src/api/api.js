@@ -36,3 +36,26 @@ export const requestLogOut = async () => {
 
   return data;
 };
+
+export const requestGetBooksRec = async (page) => {
+  const results = await instance.get("/books/recommend", {
+    params: {
+      page,
+      limit: 10,
+    },
+  });
+  console.log(results.data.results);
+  return results.data;
+};
+
+// export const requestAddContact = async (formData) => {
+//   const { data } = await instance.post("/contacts", formData);
+
+//   return data;
+// };
+
+// export const requestDeleteContact = async (contactId) => {
+//   const { data } = await instance.delete(`/contacts/${contactId}`);
+
+//   return data;
+// };

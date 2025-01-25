@@ -1,11 +1,13 @@
 .UserNAvWrapper {
   width: 100%;
+  max-width: 1216px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #1f1f1f;
   padding: 16px;
   border-radius: 15px;
+  margin-bottom: 16px;
 }
 .activeTab {
   position: relative;
