@@ -3,24 +3,32 @@ import sprite from "../../assets/ReadIcons/symbol-defs.svg";
 import css from "./RecSYW.module.css";
 const RecSYW = () => {
   return (
-    <div>
-      <h3></h3>
-      <div>
-        <div>
-          <div>
-            <span></span>
-            <p></p>
+    <div className={css.RecSYWWrapper}>
+      <h3 className={css.RecSYWTitle}>Start your workout</h3>
+      <div className={css.RecSYWContent}>
+        <div className={css.RecSYWContentText}>
+          <div className={css.RecSYWText}>
+            <span className={css.RecSYWSpan}>1</span>
+            <p className={css.RecSYWP}>
+              <span className={css.RecSYWPS}>Create a personal library: </span>
+              add the books you intend to read to it.
+            </p>
           </div>
-          <div>
-            <span></span>
-            <p></p>
+          <div className={css.RecSYWText}>
+            <span className={css.RecSYWSpan}>2</span>
+            <p className={css.RecSYWP}>
+              <span className={css.RecSYWPS}>Create your first workout: </span>
+              define a goal, choose a period, start training.
+            </p>
           </div>
         </div>
-        <div>
-          <NavLink to="/library">Don’t have an account?</NavLink>
-          <svg className={css.svgg} width="42" height="17">
-            <use href={`${sprite}#icon-log-in-left`}></use>
-          </svg>
+        <div className={css.RecSYWNavCont}>
+          <NavLink className={css.RecSYWNav} to="/library">
+            <span className={css.RecSYWNavSpan}>My library</span>
+            <svg className={css.svg} width="24" height="24">
+              <use href={`${sprite}#icon-log-in-left`}></use>
+            </svg>
+          </NavLink>
         </div>
       </div>
     </div>

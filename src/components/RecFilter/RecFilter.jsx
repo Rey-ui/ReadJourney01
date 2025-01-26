@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useDispatch, useSelector } from "react-redux";
 import { setAuthorFilter, setTitleFilter } from "../../redux/filter/slice";
 import { getAuthorFilter, getTitleFilter } from "../../redux/books/selectors";
+import css from "./RecFilter.module.css";
 
 const UserRegisterSchema = Yup.object().shape({
   title: Yup.string()
@@ -40,31 +41,40 @@ const RecFilter = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <h3>Filters:</h3>
-      <div>
-        <label>
-          <span>Book title:</span>
-          <input type="text" name="title" {...register("title")} />
+    <form className={css.RecFilterForm} onSubmit={handleSubmit(onSubmit)}>
+      <div className={css.RecFilterInputWrapper}>
+        <h3 className={css.RecFilterTitle}>Filters:</h3>
+        <label className={css.RecFilterLabel}>
+          <span className={css.RecFilterInputSpan}>Book title:</span>
+          <input
+            className={css.RecFilterInput}
+            type="text"
+            name="title"
+            {...register("title")}
+          />
 
           {errors.title && <span>{errors.title.message}</span>}
         </label>
-        <label>
-          <span>The author:</span>
-          <input type="text" name="author" {...register("author")} />
+        <label className={css.RecFilterLabel}>
+          <span className={css.RecFilterInputSpan}>The author:</span>
+          <input
+            className={css.RecFilterInput}
+            type="text"
+            name="author"
+            {...register("author")}
+          />
           {errors.author && <span>{errors.author.message}</span>}
         </label>
       </div>
 
-      <div>
-        <button
-          type="submit"
-          title="Click to login user"
-          aria-label="Add new mailbox"
-        >
-          To apply
-        </button>
-      </div>
+      <button
+        className={css.RecFilterBtn}
+        type="submit"
+        title="Click to login user"
+        aria-label="Add new mailbox"
+      >
+        To apply
+      </button>
     </form>
   );
 };

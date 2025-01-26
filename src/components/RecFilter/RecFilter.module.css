@@ -1,0 +1,82 @@
+.RecFilterForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.RecFilterTitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: #f9f9f9;
+  margin-left: 14px;
+}
+.RecFilterInputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+.RecFilterLabel {
+  width: 100%;
+  position: relative;
+}
+.RecFilterInputSpan {
+  position: absolute;
+  left: 14px;
+  top: 16px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: #686868;
+}
+input:-webkit-autofill {
+  background: #262626 !important;
+  color: #f9f9f9 !important;
+  border-radius: 12px !important;
+  -webkit-box-shadow: 0 0 0px 1000px #262626 inset !important;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: unset !important;
+  -webkit-box-shadow: unset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+input:-webkit-autofill {
+  -webkit-text-fill-color: #f9f9f9 !important; /* Цвет текста */
+  background-color: #262626 !important; /* Цвет фона */
+  -webkit-box-shadow: 0 0 0px 1000px #262626 inset !important; /* Фиксация фона */
+  border-radius: 12px; /* Сохранение формы */
+}
+.RecFilterInput {
+  width: 100%;
+  padding: 16px 14px;
+  padding-left: 95px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: #f9f9f9 !important;
+  border-radius: 12px;
+  background: #262626;
+}
+.RecFilterBtn {
+  border: 1px solid rgba(249, 249, 249, 0.2);
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  color: #f9f9f9;
+  background-color: #1f1f1f;
+  transition: all 250ms;
+}
+.RecFilterBtn:hover {
+  color: #1f1f1f;
+  background: #f9f9f9;
+  outline: none;
+}
