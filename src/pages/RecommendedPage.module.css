@@ -6,13 +6,13 @@
 }
 .RecommendRecArticles {
   border-radius: 30px;
-  width: 353px;
+  /* width: 353px; */
   background: #1f1f1f;
   padding: 40px 20px 20px 20px;
 }
 .RecommendList {
   border-radius: 30px;
-  width: 847px;
+  /* width: 847px; */
   background: #1f1f1f;
   padding: 40px 40px 28px 40px;
 }

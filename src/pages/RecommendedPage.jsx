@@ -20,13 +20,12 @@ const RecommendedPage = () => {
       <div className={css.RecommendRecArticles}>
         <RecArticles />
       </div>
-      <div className={css.RecommendList}>
-        {isLoading && !error ? (
-          <div>loading...</div>
-        ) : (
-          <RecommendedList page={page} setPage={setPage} />
-        )}
-      </div>
+
+      {isLoading && !error ? (
+        <div>loading...</div>
+      ) : (
+        <RecommendedList page={page} setPage={setPage} />
+      )}
     </div>
   );
 };

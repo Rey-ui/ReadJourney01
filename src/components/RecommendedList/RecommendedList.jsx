@@ -1,24 +1,21 @@
 import { useSelector } from "react-redux";
-import {
-  getBooksRec,
-  selectFilteredContacts,
-} from "../../redux/books/selectors";
+import { selectFilteredContacts } from "../../redux/books/selectors";
 import RecPaginationBtns from "../RecPaginationBtns/RecPaginationBtns";
 import RecBooksItem from "../RecBooksItem/RecBooksItem";
-
+import css from "./RecommendedList.module.css";
 const RecommendedList = ({ page, setPage }) => {
   const books = useSelector(selectFilteredContacts);
   return (
-    <div>
-      <div>
-        <h2>Recommended</h2>
+    <div className={css.RecListWrapper}>
+      <div className={css.RecListHeader}>
+        <h2 className={css.RecListTitle}>Recommended</h2>
         <RecPaginationBtns page={page} setPage={setPage} />
       </div>
 
-      <ul>
+      <ul className={css.RecList}>
         {books.map((book) => {
           return (
-            <li key={book._id}>
+            <li className={css.RecItem} key={book._id}>
               <RecBooksItem book={book} />
             </li>
           );
