@@ -1,5 +1,6 @@
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
 import css from "./MainLogo.module.css";
+
 const MainLogo = ({ LogoWrapper }) => {
   return (
     <div className={css[LogoWrapper]}>

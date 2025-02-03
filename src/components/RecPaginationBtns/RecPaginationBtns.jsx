@@ -13,7 +13,7 @@ const RecPaginationBtns = ({ page, setPage }) => {
   const totalPages = useSelector(getTotal);
   return (
     <div className={css.BtnsWrapper}>
-      <button onClick={handlePrevious}>
+      <button className={css.Btn} onClick={handlePrevious}>
         <svg
           disabled={page === 1}
           className={page === 1 ? css.svgdisabled : css.svg}
@@ -23,7 +23,7 @@ const RecPaginationBtns = ({ page, setPage }) => {
           <use href={`${sprite}#icon-Vector-left`}></use>
         </svg>
       </button>
-      <button onClick={handleNext}>
+      <button className={css.Btn} onClick={handleNext}>
         <svg
           disabled={page === totalPages}
           className={page === totalPages ? css.svgdisabled : css.svg}

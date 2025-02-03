@@ -9,7 +9,7 @@ button .svgdisabled {
   fill: none !important;
   cursor: auto;
 }
-button {
+.Btn {
   cursor: pointer;
   outline: none;
   background-color: inherit;

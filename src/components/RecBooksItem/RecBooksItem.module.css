@@ -4,6 +4,16 @@
   align-items: flex-start;
   gap: 8px; */
   max-width: 137px;
+  display: block;
+  margin: 0;
+  outline: none;
+  border: none;
+}
+.RecItemWrapper {
+  all: unset; /* Сбрасывает все стили кнопки */
+  display: block; /* Чтобы работало как блочный контейнер */
+  width: 100%; /* Если нужно растягивать по ширине */
+  cursor: pointer; /* Если важно сохранять поведение кнопки */
 }
 .RecItemImg {
   border-radius: 8px;
