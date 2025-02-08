@@ -15,10 +15,16 @@ import storage from "redux-persist/lib/storage";
 import { authReducer } from "./auth/slice.js";
 import { booksReducer } from "./books/slice.js";
 import { filtersReducer } from "./filter/slice.js";
+import { libraryReducer } from "./libraryBooks/slice.js";
 const authConfig = {
   key: "auth",
   storage,
   whitelist: ["token"],
+};
+const favoritePersistConfig = {
+  key: "library",
+  storage,
+  whitelist: ["library"],
 };
 
 export const store = configureStore({
@@ -26,6 +32,7 @@ export const store = configureStore({
     books: booksReducer,
     // filters: filtersReducer,
     filters: filtersReducer,
+    favorites: persistReducer(favoritePersistConfig, libraryReducer),
     auth: persistReducer(authConfig, authReducer),
   },
   middleware: (getDefaultMiddleware) =>
