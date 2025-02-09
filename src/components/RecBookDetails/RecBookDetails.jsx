@@ -1,7 +1,19 @@
 import css from "./RecBookDetails.module.css";
 import sprite from "../../assets/ReadIcons/symbol-defs.svg";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addFavorite } from "../../redux/libraryBooks/slice";
 
 const RecBookDetails = ({ modalData, closeModal }) => {
+  const navigate = useNavigate();
+  const dispath = useDispatch();
+  const handleAddToLibrary = () => {
+    // Добавление книги
+    closeModal(); // Закрытие старой модалки
+    // Показ успешной модалки
+    navigate("/library"); // Переход на страницу библиотеки
+    dispath(addFavorite(modalData));
+  };
   return (
     <div className={css.DetailsWrapper}>
       <button className={css.DetailsBtnClose} onClick={closeModal}>
@@ -20,7 +32,9 @@ const RecBookDetails = ({ modalData, closeModal }) => {
           <p className={css.DetailsAuthor}>{modalData.author}</p>
           <span className={css.DetailsTotal}>{modalData.totalPages}</span>
         </div>
-        <button className={css.DetailsButton}>Add to library</button>
+        <button onClick={handleAddToLibrary} className={css.DetailsButton}>
+          Add to library
+        </button>
       </div>
     </div>
   );

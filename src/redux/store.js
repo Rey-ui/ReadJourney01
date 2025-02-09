@@ -32,7 +32,7 @@ export const store = configureStore({
     books: booksReducer,
     // filters: filtersReducer,
     filters: filtersReducer,
-    favorites: persistReducer(favoritePersistConfig, libraryReducer),
+    library: persistReducer(favoritePersistConfig, libraryReducer),
     auth: persistReducer(authConfig, authReducer),
   },
   middleware: (getDefaultMiddleware) =>
