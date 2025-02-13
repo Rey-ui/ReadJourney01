@@ -6,6 +6,7 @@ import css from "./RecommendedList.module.css";
 import ModalBook from "../Modal/ModalBook";
 import RecBookDetails from "../RecBookDetails/RecBookDetails";
 import { useState } from "react";
+
 const RecommendedList = ({ page, setPage }) => {
   const books = useSelector(selectFilteredContacts);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,6 +20,7 @@ const RecommendedList = ({ page, setPage }) => {
   const openModal = () => setIsModalOpen(true);
 
   const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className={css.RecListWrapper}>
       <div className={css.RecListHeader}>

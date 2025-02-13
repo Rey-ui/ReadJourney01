@@ -8,10 +8,8 @@ const RecBookDetails = ({ modalData, closeModal }) => {
   const navigate = useNavigate();
   const dispath = useDispatch();
   const handleAddToLibrary = () => {
-    // Добавление книги
-    closeModal(); // Закрытие старой модалки
-    // Показ успешной модалки
-    navigate("/library"); // Переход на страницу библиотеки
+    closeModal();
+    navigate("/library", { state: { showSuccessModal: true } });
     dispath(addFavorite(modalData));
   };
   return (

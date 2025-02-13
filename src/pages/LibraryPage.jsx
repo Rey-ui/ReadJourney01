@@ -1,32 +1,36 @@
 import { useSelector } from "react-redux";
-import RecBooksItem from "../components/RecBooksItem/RecBooksItem";
-//import RecommendedList from "../components/RecommendedList/RecommendedList";
 import { getFavorites } from "../redux/libraryBooks/selectors";
-import img from "../assets/Images/bigbooks.png";
+//import LibBooksItem from "../components/LibBooksItem/LibBooksItem";
+import { useLocation } from "react-router-dom";
+import ModalSuccess from "../components/Modal/ModalSuccess";
+import ModalSuccessInfo from "../components/ModalSuccessInfo/ModalSuccessInfo";
+import { useState } from "react";
+import LibraryClear from "../components/LibraryClear/LibraryClear";
+import { selectError, selectIsLoading } from "../redux/books/selectors";
+import LibraryList from "../components/LibraryList/LibraryList";
 
 const LibraryPage = () => {
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+  const location = useLocation();
   const books = useSelector(getFavorites);
+
+  //const showModal = location.state?.showSuccessModal || false;
+  const [isModalOpen, setIsModalOpen] = useState(
+    location.state?.showSuccessModal || false
+  );
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div>
-      {books.length === 0 && (
-        <div>
-          <img src={img} alt="camper-logo" />
-          <p>
-            To start training, add some of your books or from the recommended
-            ones
-          </p>
-        </div>
+      <div>
+        {books.length === 0 && <LibraryClear />}
+        {isLoading && !error ? <div>loading...</div> : <LibraryList />}
+      </div>
+      {isModalOpen && (
+        <ModalSuccess isOpen={true} closeModal={closeModal}>
+          <ModalSuccessInfo closeModal={closeModal} />
+        </ModalSuccess>
       )}
-      <ul>
-        {books &&
-          books.map((book) => {
-            return (
-              <li key={book._id}>
-                <RecBooksItem book={book} />
-              </li>
-            );
-          })}
-      </ul>
     </div>
   );
 };
