@@ -8,6 +8,8 @@ import { useState } from "react";
 import LibraryClear from "../components/LibraryClear/LibraryClear";
 import { selectError, selectIsLoading } from "../redux/books/selectors";
 import LibraryList from "../components/LibraryList/LibraryList";
+import LibraryDashboard from "../components/LibraryDashboard/LibraryDashboard";
+import LibraryHeader from "../components/LibraryHeader/LibraryHeader";
 
 const LibraryPage = () => {
   const isLoading = useSelector(selectIsLoading);
@@ -22,7 +24,9 @@ const LibraryPage = () => {
   const closeModal = () => setIsModalOpen(false);
   return (
     <div>
+      <LibraryDashboard />
       <div>
+        <LibraryHeader />
         {books.length === 0 && <LibraryClear />}
         {isLoading && !error ? <div>loading...</div> : <LibraryList />}
       </div>
