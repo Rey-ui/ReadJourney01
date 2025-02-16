@@ -19,7 +19,6 @@ const RecFilter = () => {
   const dispatch = useDispatch();
   const titleFilter = useSelector(getTitleFilter);
   const authorFilter = useSelector(getAuthorFilter);
-
   const {
     register,
     handleSubmit,

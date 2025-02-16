@@ -1,0 +1,87 @@
+.LibraryRecWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #262626;
+}
+.LibraryRecTitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #e3e3e3;
+}
+.LibraryRecList {
+  display: flex;
+  gap: 20px;
+}
+.LibraryRecItem {
+  max-width: 71px;
+}
+.LibraryRecBtn {
+  display: block;
+  margin: 0;
+  outline: none;
+  border: none;
+  max-width: 71px;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.LibraryRecImg {
+  border-radius: 8px;
+  width: 71px;
+  height: 107px;
+}
+.LibraryRecContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+.LibraryRecConTitle {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #e3e3e3;
+  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
+  text-overflow: ellipsis;
+  max-width: 71px;
+}
+.LibraryRecText {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  color: #686868;
+  white-space: nowrap; /* Запрещает перенос текста на новую строку */
+  overflow: hidden; /* Скрывает содержимое, выходящее за пределы контейнера */
+  text-overflow: ellipsis;
+  max-width: 71px;
+}
+.LibraryRecNav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LibraryRecNavSpan {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #686868;
+}
+.svg {
+  stroke: azure;
+  fill: none;
+}

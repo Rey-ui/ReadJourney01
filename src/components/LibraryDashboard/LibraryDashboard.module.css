@@ -1,0 +1,7 @@
+.LibraryDashboardWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 78px;
+}

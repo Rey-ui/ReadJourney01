@@ -6,6 +6,7 @@
   /* width: 847px; */
   background: #1f1f1f;
   padding: 40px 40px 28px 40px;
+  min-width: 847px;
   max-width: 847px;
   /* width: 100%; */
 }

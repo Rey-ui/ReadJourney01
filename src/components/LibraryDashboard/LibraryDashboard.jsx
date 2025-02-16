@@ -1,9 +1,9 @@
 import LibraryForm from "../LibraryForm/LibraryForm";
 import LibraryRecommended from "../LibraryRecommended/LibraryRecommended";
-
+import css from "./LibraryDashboard.module.css";
 const LibraryDashboard = () => {
   return (
-    <div>
+    <div className={css.LibraryDashboardWrapper}>
       <LibraryForm />
       <LibraryRecommended />
     </div>

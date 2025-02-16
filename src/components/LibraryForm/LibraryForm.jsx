@@ -4,7 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 // import { useDispatch, useSelector } from "react-redux";
 // import { setAuthorFilter, setTitleFilter } from "../../redux/filter/slice";
 // import { getAuthorFilter, getTitleFilter } from "../../redux/books/selectors";
-
+import css from "./LibraryForm.module.css";
 const UserRegisterSchema = Yup.object().shape({
   title: Yup.string()
     .required("Email is required!")
@@ -43,28 +43,44 @@ const LibraryForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <h3>Filters:</h3>
-        <label>
-          <span>Book title:</span>
-          <input type="text" name="title" {...register("title")} />
+    <form onSubmit={handleSubmit(onSubmit)} className={css.LibraryForm}>
+      <div className={css.LibraryFormInputs}>
+        <h3 className={css.LibraryFormTitle}>Create your library:</h3>
+        <label className={css.LibraryFormLabel}>
+          <span className={css.LibraryFormSpan}>Book title:</span>
+          <input
+            className={css.LibraryFormInputT}
+            type="text"
+            name="title"
+            {...register("title")}
+          />
 
           {errors.title && <span>{errors.title.message}</span>}
         </label>
-        <label>
-          <span>The author:</span>
-          <input type="text" name="author" {...register("author")} />
+        <label className={css.LibraryFormLabel}>
+          <span className={css.LibraryFormSpan}>The author:</span>
+          <input
+            className={css.LibraryFormInput}
+            type="text"
+            name="author"
+            {...register("author")}
+          />
           {errors.author && <span>{errors.author.message}</span>}
         </label>
-        <label>
-          <span>Number of pages:</span>
-          <input type="text" name="pages" {...register("pages")} />
+        <label className={css.LibraryFormLabel}>
+          <span className={css.LibraryFormSpan}>Number of pages:</span>
+          <input
+            className={css.LibraryFormInputP}
+            type="text"
+            name="pages"
+            {...register("pages")}
+          />
           {errors.pages && <span>{errors.pages.message}</span>}
         </label>
       </div>
 
       <button
+        className={css.LibraryFormBtn}
         type="submit"
         title="Click to login user"
         aria-label="Add new mailbox"

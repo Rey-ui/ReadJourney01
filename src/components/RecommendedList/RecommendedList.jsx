@@ -11,7 +11,6 @@ const RecommendedList = ({ page, setPage }) => {
   const books = useSelector(selectFilteredContacts);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalData, setModalData] = useState({});
-
   const handleOpenModal = (_id) => {
     setIsModalOpen(true);
     setModalData(books.filter((book) => book._id === _id)[0]);
