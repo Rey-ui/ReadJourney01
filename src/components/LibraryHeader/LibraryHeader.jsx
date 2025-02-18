@@ -16,7 +16,7 @@ const LibraryHeader = () => {
   };
   return (
     <div className={css.LibraryHeaderWrapper}>
-      <h2 className={css.LibraryHeaderTitle}>LibraryHeader</h2>
+      <h2 className={css.LibraryHeaderTitle}>My library</h2>
       <div className={css.LibraryHeaderSelectWrapper}>
         <select
           className={css.LibraryHeaderSelect}

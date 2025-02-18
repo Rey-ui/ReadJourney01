@@ -1,0 +1,10 @@
+.LibraryListWrapper {
+}
+.LibraryList {
+  display: flex;
+  gap: 27px 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.LibraryListItem {
+}

@@ -1,0 +1,29 @@
+.LibraryClear {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Чтобы текст тоже был по центру */
+  height: 100%;
+  max-width: 274px;
+}
+.LibraryClearImgCont {
+  padding: 30px;
+  border-radius: 100%;
+  background-color: #262626;
+  margin-bottom: 20px;
+}
+.LibraryClearImg {
+}
+.LibraryClearText {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #f9f9f9;
+}
+.LibraryClearText span {
+  color: #686868;
+}

@@ -14,5 +14,6 @@
   /* width: 847px; */
   background: #1f1f1f;
   padding: 40px 40px 28px 40px;
-  width: 847px;
+  min-width: 847px;
+  max-width: 847px;
 }
