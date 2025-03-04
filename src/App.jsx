@@ -8,6 +8,7 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUserIsRefreshing } from "./redux/auth/selectors";
 import { apiRefreshUser } from "./redux/auth/operations";
+import ReadingPage from "./pages/ReadingPage";
 //import LibraryPage from "./pages/LibraryPage";
 const RegisterPage = lazy(() => import("./pages/RegisterPage"));
 // const RegistrationPage = lazy(() => import("./pages/RegistrationPage"));
@@ -47,6 +48,12 @@ function App() {
               path="/library"
               element={
                 <PrivateRoute redirectTo="/login" component={<LibraryPage />} />
+              }
+            />
+            <Route
+              path="/reading"
+              element={
+                <PrivateRoute redirectTo="/login" component={<ReadingPage />} />
               }
             />
           </Route>
