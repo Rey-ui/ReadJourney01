@@ -1,8 +1,5 @@
 .LogoWrapper {
-  margin-bottom: 107px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+  margin-bottom: 40px;
 }
 .LogoWrapperMenu {
   margin-bottom: 0;
@@ -15,9 +12,27 @@
   fill: #f9f9f9;
 }
 .LogoTitle {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  display: none;
+}
+@media screen and (min-width: 1552px) {
+  .LogoWrapper {
+    margin-bottom: 107px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .LogoWrapperMenu {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .LogoTitle {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    display: inline-block;
+  }
 }

@@ -1,8 +1,8 @@
 .Form {
   display: flex;
   flex-direction: column;
-  gap: 82px;
-  max-width: 472px;
+  gap: 72px;
+  max-width: 295px;
 }
 .FormContainer {
   display: flex;
@@ -20,8 +20,9 @@
   left: 14px;
   top: 16px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
+
+  font-size: 12px;
+  line-height: 133%;
   letter-spacing: -0.02em;
   color: #686868;
 }
@@ -45,11 +46,11 @@ input:-webkit-autofill {
 
 .FormInput {
   width: 100%;
-  padding: 16px 14px;
+  padding: 14px 14px;
   padding-left: 65px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
+  font-size: 12px;
+  line-height: 133%;
   letter-spacing: -0.02em;
   color: #f9f9f9 !important;
   border-radius: 12px;
@@ -57,12 +58,12 @@ input:-webkit-autofill {
 }
 .FormInputPass {
   width: 100%;
-  padding: 16px 14px;
+  padding: 14px 14px;
   padding-left: 86px;
   padding-right: 40px;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
+  font-size: 12px;
+  line-height: 133%;
   letter-spacing: -0.02em;
   color: #f9f9f9;
   background: #262626;
@@ -85,17 +86,17 @@ button {
 .FormButtons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 .FormButton,
 .FormButton:active {
   font-weight: 700;
-  font-size: 20px;
-  line-height: 100%;
+  font-size: 14px;
+  line-height: 129%;
   letter-spacing: 0.02em;
   color: #1f1f1f;
   border-radius: 30px;
-  padding: 16px 54px;
+  padding: 12px 29px;
   background: #f9f9f9;
   transition: all 250ms;
 }
@@ -107,10 +108,67 @@ button {
 
 .FormButtonNav {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 129%;
+  font-size: 12px;
+  line-height: 117%;
   letter-spacing: -0.02em;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #686868;
+}
+
+@media screen and (min-width: 1552px) {
+  .Form {
+    gap: 82px;
+    max-width: 472px;
+  }
+  .FormContainer {
+    gap: 14px;
+  }
+  .FormLabelSpan {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+  }
+  .FormInput {
+    width: 100%;
+    padding: 16px 14px;
+    padding-left: 65px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+  }
+  .FormInputPass {
+    width: 100%;
+    padding: 16px 14px;
+    padding-left: 86px;
+    padding-right: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+  }
+  button {
+    background-color: inherit;
+  }
+
+  .FormButtons {
+    gap: 20px;
+  }
+  .FormButton,
+  .FormButton:active {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    padding: 16px 54px;
+  }
+
+  .FormButtonNav {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 129%;
+    letter-spacing: -0.02em;
+  }
 }

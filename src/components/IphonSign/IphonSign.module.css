@@ -1,5 +1,16 @@
 .IphonSignImage {
-  padding: 80px 98px 0px 98px;
+  padding: 20px 40px 0px 40px;
 }
 .IphonSignImg {
+  width: 255px;
+  height: 518px;
+}
+@media screen and (min-width: 1552px) {
+  .IphonSignImage {
+    padding: 80px 98px 0px 98px;
+  }
+  .IphonSignImg {
+    width: auto;
+    height: 100%;
+  }
 }
