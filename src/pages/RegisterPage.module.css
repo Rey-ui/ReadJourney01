@@ -20,6 +20,30 @@
   min-width: 335px;
   min-height: 351px;
 }
+@media screen and (min-width: 768px) {
+  .RegisterPageContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .RegisterPageContent {
+    background: #1f1f1f;
+    border-radius: 30px;
+    width: 704px;
+    padding: 40px 168px 40px 64px;
+    /* height: 736px; */
+  }
+  .RegisterPageImg {
+    background: #1f1f1f;
+    border-radius: 30px;
+    min-width: 600px;
+    min-height: 736px;
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1552px) {
   .RegisterPageContainer {
     margin: 0 auto;
@@ -32,7 +56,7 @@
     background: #1f1f1f;
     border-radius: 30px;
     min-width: 600px;
-    padding: 40px 64px;
+    padding: 40px 64px 40px 64px;
     /* height: 736px; */
   }
   .RegisterPageImg {
@@ -40,5 +64,6 @@
     border-radius: 30px;
     min-width: 600px;
     min-height: 736px;
+    display: block;
   }
 }

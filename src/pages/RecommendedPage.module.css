@@ -3,6 +3,7 @@
   display: flex;
   gap: 16px;
   /* max-height: 651px; */
+  display: none;
 }
 .RecommendRecArticles {
   border-radius: 30px;

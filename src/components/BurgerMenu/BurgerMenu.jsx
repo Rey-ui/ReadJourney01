@@ -1,15 +1,19 @@
-import { NavLink, useLocation } from "react-router-dom";
-import MainLogo from "../MainLogo/MainLogo";
-import AppBar from "../AppBar/AppBar";
-import css from "./UserMenu.module.css";
-
-const UserMenu = () => {
-  const LogoWrapper = "LogoWrapperMenu";
-
-  const location = useLocation();
+import css from "./BurgerMenu.module.css";
+import { NavLink } from "react-router-dom";
+import sprite from "../../assets/ReadIcons/symbol-defs.svg";
+const BurgerMenu = ({ burger, toggleBurger, onLogOut }) => {
   return (
-    <nav className={css.UserNAvWrapper}>
-      <MainLogo LogoWrapper={LogoWrapper} />
+    <div
+      className={css.BurgerMenu}
+      style={{
+        display: burger ? "block" : "none",
+      }}
+    >
+      <button className={css.DetailsBtnClose} onClick={toggleBurger}>
+        <svg className={css.LogoSvg} width="28" height="28">
+          <use href={`${sprite}#icon-x-close`}></use>
+        </svg>
+      </button>
       <ul className={css.UserNAvList}>
         <li className={css.UserNavItem}>
           <NavLink
@@ -36,9 +40,11 @@ const UserMenu = () => {
           </NavLink>
         </li>
       </ul>
-      <AppBar />
-    </nav>
+      <button className={css.BurgerBarBtn} type="button" onClick={onLogOut}>
+        Log out
+      </button>
+    </div>
   );
 };
 
-export default UserMenu;
+export default BurgerMenu;

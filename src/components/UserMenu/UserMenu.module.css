@@ -1,14 +1,14 @@
 .UserNAvWrapper {
-  max-width: 1216px;
+  max-width: 335px;
   width: 100%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #1f1f1f;
-  padding: 16px;
+  padding: 20px;
   border-radius: 15px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 .activeTab {
   position: relative;
@@ -29,6 +29,7 @@
   display: flex;
   align-items: center;
   gap: 40px;
+  display: none;
 }
 .UserNavItem {
   font-weight: 500;
@@ -39,4 +40,51 @@
 }
 .buttonAddInfo {
   color: #686868;
+}
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1552px) {
+  .UserNAvWrapper {
+    max-width: 1216px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1f1f1f;
+    padding: 16px;
+    border-radius: 15px;
+    margin-bottom: 16px;
+  }
+  .activeTab {
+    position: relative;
+    color: #f9f9f9;
+  }
+  .activeTab::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: -1px;
+    top: 30px;
+    background-color: #4f92f7;
+    color: #4f92f7;
+    border-radius: 8px;
+  }
+  .UserNAvList {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .UserNavItem {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 112%;
+    letter-spacing: -0.02em;
+    color: #f9f9f9;
+  }
+  .buttonAddInfo {
+    color: #686868;
+  }
 }

@@ -2,6 +2,7 @@
   margin: 0 auto;
   display: flex;
   gap: 16px;
+  display: none;
 }
 .LibraryDashboard {
   border-radius: 30px;
