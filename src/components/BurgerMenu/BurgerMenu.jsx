@@ -6,7 +6,7 @@ const BurgerMenu = ({ burger, toggleBurger, onLogOut }) => {
     <div
       className={css.BurgerMenu}
       style={{
-        display: burger ? "block" : "none",
+        display: burger ? "flex" : "none",
       }}
     >
       <button className={css.DetailsBtnClose} onClick={toggleBurger}>
